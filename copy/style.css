@@ -1,0 +1,42 @@
+body{
+    height: 100vh;
+    background: linear-gradient(MidnightBlue,white);
+}
+h1
+{
+    text-align: center;
+    color:white;
+    margin-top: 1rem;
+}
+.btn-primary
+{
+    border-radius: 1.5rem;
+    border: 2px solid white;
+    width: 150px;
+    background-color:red;
+    font-weight:600;
+    color:black;
+    padding:10px;
+    margin-bottom:20px;
+    margin-top:20px;
+}
+.btn:hover
+{
+    background: orange;
+}
+.one,.two,.three
+{
+    text-align: center;
+}
+.one,.three{
+    margin-top: 2rem;
+}
+.one textarea{
+    padding: 1rem;
+}
+.three textarea{
+    padding: 1rem;
+}
+.two{
+    margin-top: 1.5rem;
+}
