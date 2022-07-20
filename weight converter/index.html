@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+        .card {
+        float: none;  
+        margin-top: 50px;
+        margin-left: 520px;
+      }
+      body{
+        background-image: linear-gradient(blue, white);
+        background-repeat: no-repeat;
+      }
+      .btn{
+        border-radius: 1.5rem;
+        border: 2px solid black;
+        width: 150px;
+        background-color:red;
+        font-weight:600;
+        color:#fff;
+        padding:10px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    .btn:hover
+    {
+        background: black;
+        border: black;
+    }   
+    </style>
+</head>
+<body>
+    <h1 style="color: white ;"><marquee>Weight Converter</marquee></h1>
+    <div class="card m-40" style="width: 350px; height: 500px; background-color: RoyalBlue; color: white;">
+        <img class="card-img-top" width="100px" height="250px" src="1.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-text">Convert weight from gram to kg</h5><br>
+          <input id="Grams" type="number" placeholder="Enter weight in grams"><br><br>
+          <h4 id="Kilograms"> weight in KG </h4>
+        </div>
+        <input type="button" id="btn" onclick="weightConverter()" value="Convert" class="btn btn-primary">
+    </div>
+
+      <script>
+        const btn = document.getElementById('btn');
+            btn.addEventListener('click', function onClick() {
+            btn.style.backgroundColor = 'red';
+            btn.style.color = 'white';
+            btn.style.borderColor ='black';
+            });
+          function weightConverter() {
+          var valNum = parseInt(document.getElementById("Grams").value);
+          if (isNaN(valNum))
+          {
+            document.getElementById("Kilograms").innerHTML="Please enter some value";
+          }
+          else{
+            document.getElementById("Kilograms").innerHTML=valNum/1000+" Kilograms";
+          }
+        }
+      </script>
+</body>
+</html>
